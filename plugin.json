@@ -9,12 +9,5 @@
 		{ "hook": "filter:privileges.groups.list_human", "method": "addPrivileges" },
 		{ "hook": "filter:privileges.groups.list", "method": "addPrivileges" },
 		{ "hook": "filter:privileges.posts.edit", "method": "allowEditing" }
-	],
-	"scripts": [
-		"static/lib/main.js"
-	],
-	"acpScripts": [
-		"static/lib/admin.js"
-	],
-	"templates": "static/templates"
+	]
 }
