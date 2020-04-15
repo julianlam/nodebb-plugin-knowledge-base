@@ -6,7 +6,7 @@ const posts = require.main.require('./src/posts').async;
 const topics = require.main.require('./src/topics').async;
 const controllers = require('./lib/controllers');
 
-const plugin = {};
+const plugin = module.exports;
 
 plugin.init = function (params, callback) {
 	const router = params.router;
@@ -52,14 +52,12 @@ plugin.addPrivileges = function (data, callback) {
 	process.nextTick(callback, null, data);
 };
 
-plugin.allowEditing = async function (data, callback) {
+plugin.allowEditing = async function (data) {
 	const kbEnabled = await privileges.posts.can('knowledgeBase', data.pid, data.uid);
 	const tid = await posts.getPostField(data.pid, 'tid');
 	const isMainPid = await topics.getTopicField(tid, 'mainPid') === data.pid;
 
 	// If the user has the kb privilege, pretend they're OP to trick core into granting access
 	data.owner = kbEnabled && isMainPid ? true : data.owner;
-	callback(null, data);
+	return data;
 };
-
-module.exports = plugin;
