@@ -36,14 +36,12 @@
     "compatibility": "^1.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "^8.3.5",
-    "@commitlint/config-angular": "^7.1.2",
-    "eslint": "^6.8.0",
-    "eslint-config-airbnb-base": "^12.1.0",
-    "eslint-plugin-import": "^2.8.0",
-    "husky": "^2.4.0"
-  },
-  "dependencies": {
-    "lint-staged": "^10.0.9"
+    "@commitlint/cli": "9.1.2",
+    "@commitlint/config-angular": "9.1.2",
+    "eslint": "7.8.0",
+    "eslint-config-airbnb-base": "14.2.0",
+    "eslint-plugin-import": "2.22.0",
+    "husky": "4.2.5",
+    "lint-staged": "10.2.13"
   }
 }
