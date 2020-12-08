@@ -1,9 +1,9 @@
 'use strict';
 
 const meta = require.main.require('./src/meta');
-const privileges = require.main.require('./src/privileges').async;
-const posts = require.main.require('./src/posts').async;
-const topics = require.main.require('./src/topics').async;
+const privileges = require.main.require('./src/privileges');
+const posts = require.main.require('./src/posts');
+const topics = require.main.require('./src/topics');
 const controllers = require('./lib/controllers');
 
 const plugin = module.exports;
