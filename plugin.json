@@ -4,10 +4,7 @@
 	"library": "./library.js",
 	"hooks": [
 		{ "hook": "static:app.load", "method": "init" },
-		{ "hook": "filter:admin.header.build", "method": "addAdminNavigation" },
-		{ "hook": "action:settings.set", "method": "onSettingsChange" },
-		{ "hook": "filter:privileges.groups.list_human", "method": "addPrivileges" },
-		{ "hook": "filter:privileges.groups.list", "method": "addPrivileges" },
+		{ "hook": "static:privileges.categories.init", "method": "addPrivilege" },
 		{ "hook": "filter:privileges.posts.edit", "method": "allowEditing" }
 	]
 }
