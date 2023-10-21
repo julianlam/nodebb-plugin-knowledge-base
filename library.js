@@ -10,7 +10,7 @@ plugin.init = function (params, callback) {
 	callback();
 };
 
-plugin.addPrivileges = function (data, callback) {
+plugin.addPrivilege = function (data, callback) {
 	data.privileges.set(
 		'knowledgeBase', { label: 'Knowledge Base' },
 	);
