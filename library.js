@@ -1,8 +1,8 @@
 'use strict';
 
-const privileges = require.main.require('./src/privileges');
-const posts = require.main.require('./src/posts');
-const topics = require.main.require('./src/topics');
+const privileges = nodebb.require('./src/privileges');
+const posts = nodebb.require('./src/posts');
+const topics = nodebb.require('./src/topics');
 
 const plugin = module.exports;
 
